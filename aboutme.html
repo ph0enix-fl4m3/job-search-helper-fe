@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Skill Analyzer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background: linear-gradient(135deg, #f3f4f6, #e0e7ff);
+      }
+
+      .active-tab {
+        background-color: #4f46e5;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body class="font-sans text-gray-800 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+      <nav
+        class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <div class="text-2xl font-extrabold text-indigo-700">
+          Job Skill Analyzer
+        </div>
+        <ul class="flex items-center gap-6">
+          <li>
+            <a
+              href="#"
+              class="active-tab px-4 py-2 rounded-lg font-semibold hover:bg-indigo-600 transition"
+              >General Information</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="px-4 py-2 rounded-lg font-semibold text-gray-600 hover:text-indigo-700 hover:bg-indigo-100 transition"
+              >Analyze Job Offering</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow w-full max-w-4xl mx-auto bg-white shadow-lg rounded-2xl mt-10 mb-20 p-10">
+      <h1 class="text-3xl font-bold text-gray-900 mb-8">General Information</h1>
+
+      <form class="space-y-10">
+        <!-- Basic Info -->
+        <section>
+          <h2 class="text-xl font-semibold text-indigo-700 mb-4">
+            Basic Information
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1"
+                >First Name</label
+              >
+              <input
+                type="text"
+                placeholder="Enter your first name"
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-indigo-300 focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1"
+                >Last Name</label
+              >
+              <input
+                type="text"
+                placeholder="Enter your last name"
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-indigo-300 focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1"
+                >Date of Birth</label
+              >
+              <input
+                type="date"
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-indigo-300 focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1"
+                >Country</label
+              >
+              <input
+                type="text"
+                placeholder="Enter your country"
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-indigo-300 focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1"
+                >City</label
+              >
+              <input
+                type="text"
+                placeholder="Enter your city"
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-indigo-300 focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1"
+                >Email</label
+              >
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-indigo-300 focus:outline-none"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- Professional Info -->
+        <section>
+          <h2 class="text-xl font-semibold text-indigo-700 mb-4">
+            Professional Background
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1"
+                >Current Occupation</label
+              >
+              <input
+                type="text"
+                placeholder="e.g., Software Developer, Student"
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-indigo-300 focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1"
+                >Years of Experience</label
+              >
+              <input
+                type="number"
+                placeholder="e.g., 3"
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-indigo-300 focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1"
+                >Education Level</label
+              >
+              <select
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-indigo-300 focus:outline-none"
+              >
+                <option>Select education level</option>
+                <option>High School</option>
+                <option>Bachelor's Degree</option>
+                <option>Master's Degree</option>
+                <option>PhD</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1"
+                >Field of Study</label
+              >
+              <input
+                type="text"
+                placeholder="e.g., Computer Science, Design"
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-indigo-300 focus:outline-none"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- Skills -->
+        <section>
+          <h2 class="text-xl font-semibold text-indigo-700 mb-4">Skills</h2>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2"
+              >Technical Skills</label
+            >
+            <textarea
+              rows="3"
+              placeholder="e.g., Python, C++, Data Analysis"
+              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-indigo-300 focus:outline-none resize-none"
+            ></textarea>
+          </div>
+
+          <div class="mt-4">
+            <label class="block text-sm font-medium text-gray-700 mb-2"
+              >Soft Skills</label
+            >
+            <textarea
+              rows="3"
+              placeholder="e.g., Communication, Teamwork, Critical Thinking"
+              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-indigo-300 focus:outline-none resize-none"
+            ></textarea>
+          </div>
+        </section>
+
+        <!-- Preferences -->
+        <section>
+          <h2 class="text-xl font-semibold text-indigo-700 mb-4">
+            Job Preferences
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1"
+                >Desired Role</label
+              >
+              <input
+                type="text"
+                placeholder="e.g., Frontend Developer"
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-indigo-300 focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1"
+                >Preferred Industry</label
+              >
+              <input
+                type="text"
+                placeholder="e.g., Healthcare, Education"
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-indigo-300 focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1"
+                >Work Preference</label
+              >
+              <select
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-indigo-300 focus:outline-none"
+              >
+                <option>Select option</option>
+                <option>Remote</option>
+                <option>On-site</option>
+                <option>Hybrid</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1"
+                >Career Goals</label
+              >
+              <input
+                type="text"
+                placeholder="e.g., Become a lead data scientist"
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-indigo-300 focus:outline-none"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- Save Button -->
+        <div class="flex justify-end pt-6">
+          <button
+            type="submit"
+            class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-10 py-3 rounded-xl shadow-md transition"
+          >
+            Save Profile
+          </button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

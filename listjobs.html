@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ingested Job Offerings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+      <nav
+        class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <div class="text-2xl font-extrabold text-indigo-700">
+          Job Skill Analyzer
+        </div>
+        <ul class="flex items-center gap-6">
+          <li>
+            <a
+              href="#"
+              class="active-tab px-4 py-2 rounded-lg font-semibold hover:bg-indigo-600 transition"
+              >General Information</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="px-4 py-2 rounded-lg font-semibold text-gray-600 hover:text-indigo-700 hover:bg-indigo-100 transition"
+              >Analyze Job Offering</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main content -->
+    <main class="flex-grow flex justify-center items-start py-12">
+      <div class="w-full max-w-6xl bg-white p-8 rounded-xl shadow-md">
+        <h2 class="text-2xl font-bold mb-6 text-gray-800">
+          Ingested Job Offerings
+        </h2>
+        <p class="text-gray-600 mb-6">
+          Below is a list of all analyzed job offers. You can filter and search
+          through them by company, source, or keywords.
+        </p>
+
+        <!-- Filters -->
+        <div class="flex flex-wrap items-center gap-4 mb-8">
+          <!-- Search Bar -->
+          <div class="flex-grow">
+            <input
+              type="text"
+              placeholder="Search by job title or description..."
+              class="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            />
+          </div>
+
+          <!-- Company Filter -->
+          <div>
+            <select
+              class="border border-gray-300 rounded-lg p-3 bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            >
+              <option value="">All Companies</option>
+              <option>Google</option>
+              <option>Amazon</option>
+              <option>Microsoft</option>
+              <option>Small Startup</option>
+            </select>
+          </div>
+
+          <!-- Source Filter -->
+          <div>
+            <select
+              class="border border-gray-300 rounded-lg p-3 bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            >
+              <option value="">All Sources</option>
+              <option>LinkedIn</option>
+              <option>Indeed</option>
+              <option>Company Website</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Job Offerings Table -->
+        <div class="overflow-x-auto">
+          <table
+            class="min-w-full border border-gray-200 rounded-lg overflow-hidden"
+          >
+            <thead class="bg-gray-100 text-gray-700 uppercase text-sm">
+              <tr>
+                <th class="px-6 py-3 text-left">Company</th>
+                <th class="px-6 py-3 text-left">Job Title</th>
+                <th class="px-6 py-3 text-left">Source</th>
+                <th class="px-6 py-3 text-center">Match %</th>
+                <th class="px-6 py-3 text-center">Date</th>
+                <th class="px-6 py-3 text-center">Actions</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4">Google</td>
+                <td class="px-6 py-4">Frontend Developer</td>
+                <td class="px-6 py-4">LinkedIn</td>
+                <td class="px-6 py-4 text-center text-green-600 font-semibold">
+                  82%
+                </td>
+                <td class="px-6 py-4 text-center text-gray-500">2025-10-10</td>
+                <td class="px-6 py-4 text-center">
+                  <button class="text-blue-600 hover:text-blue-800 font-medium">
+                    View
+                  </button>
+                </td>
+              </tr>
+
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4">Amazon</td>
+                <td class="px-6 py-4">Backend Engineer</td>
+                <td class="px-6 py-4">Indeed</td>
+                <td class="px-6 py-4 text-center text-green-600 font-semibold">
+                  76%
+                </td>
+                <td class="px-6 py-4 text-center text-gray-500">2025-09-28</td>
+                <td class="px-6 py-4 text-center">
+                  <button class="text-blue-600 hover:text-blue-800 font-medium">
+                    View
+                  </button>
+                </td>
+              </tr>
+
+              <tr class="hover:bg-gray-50">
+                <td class="px-6 py-4">Microsoft</td>
+                <td class="px-6 py-4">Fullstack Developer</td>
+                <td class="px-6 py-4">Company Website</td>
+                <td class="px-6 py-4 text-center text-green-600 font-semibold">
+                  91%
+                </td>
+                <td class="px-6 py-4 text-center text-gray-500">2025-09-15</td>
+                <td class="px-6 py-4 text-center">
+                  <button class="text-blue-600 hover:text-blue-800 font-medium">
+                    View
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Pagination -->
+        <div
+          class="flex justify-between items-center mt-6 text-sm text-gray-600"
+        >
+          <p>Showing 1–3 of 3 results</p>
+          <div class="flex space-x-2">
+            <button
+              class="px-3 py-1 rounded border border-gray-300 hover:bg-gray-100"
+            >
+              &lt;
+            </button>
+            <button
+              class="px-3 py-1 rounded border border-gray-300 bg-blue-600 text-white"
+            >
+              1
+            </button>
+            <button
+              class="px-3 py-1 rounded border border-gray-300 hover:bg-gray-100"
+            >
+              2
+            </button>
+            <button
+              class="px-3 py-1 rounded border border-gray-300 hover:bg-gray-100"
+            >
+              &gt;
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-500 text-sm py-4 border-t mt-8">
+      © 2025 Career Analyzer
+    </footer>
+  </body>
+</html>
