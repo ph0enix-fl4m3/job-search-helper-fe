@@ -1,4 +1,4 @@
-import Header from "../../components/header/Header";
+import Header from "../../components/shared/header/Header";
 
 function JobsListPage() {
   return <>test</>;

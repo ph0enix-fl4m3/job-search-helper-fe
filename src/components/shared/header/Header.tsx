@@ -1,4 +1,4 @@
-import type { PageInformation } from "../../pages/PageConfig";
+import type { PageInformation } from "../../../app-config/PageConfig";
 
 interface HeaderProps {
   pages: PageInformation[];

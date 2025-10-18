@@ -1,5 +1,5 @@
-import Header from "../../components/header/Header";
-import type { PageInformation } from "../../pages/PageConfig";
+import Header from "../../components/shared/header/Header";
+import type { PageInformation } from "../../app-config/PageConfig";
 
 function AnalyzeJobPage() {
   return <>Test!!</>;

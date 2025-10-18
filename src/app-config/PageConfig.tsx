@@ -1,7 +1,7 @@
-import BiographyPage from "./biography-page/BiographyPage";
-import AnalyzeJobPage from "./analyze-job-page/AnalyzeJobPage";
-import JobsListPage from "./jobs-list-page/JobsListPage";
-import StatisticsPage from "./statistics-page/StatisticsPage";
+import BiographyPage from "../pages/biography-page/BiographyPage";
+import AnalyzeJobPage from "../pages/analyze-job-page/AnalyzeJobPage";
+import JobsListPage from "../pages/jobs-list-page/JobsListPage";
+import StatisticsPage from "../pages/statistics-page/StatisticsPage";
 import type { JSX } from "react";
 
 export interface PageInformation {

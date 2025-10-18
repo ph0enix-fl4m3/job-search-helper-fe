@@ -1,7 +1,7 @@
-import Header from "./components/header/Header";
+import Header from "./components/shared/header/Header";
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
-import * as PageConfig from "./pages/PageConfig";
+import * as PageConfig from "./app-config/PageConfig";
 
 const router = createBrowserRouter(
   PageConfig.pages.map((page) => {
