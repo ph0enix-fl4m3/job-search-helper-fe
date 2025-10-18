@@ -1,7 +1,8 @@
 export interface FormField {
   label: string;
-  type: "text" | "date";
+  type: "text" | "date" | "number" | "select";
   placeholder?: string;
+  options?: string[];
 }
 
 export interface FormParams {
@@ -41,6 +42,22 @@ function Form({ title, fields }: FormParams) {
                         type="date"
                         className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-indigo-300 focus:outline-none"
                       />
+                    )}
+
+                    {field.type === "number" && (
+                      <input
+                        type="number"
+                        placeholder={field.placeholder}
+                        className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-indigo-300 focus:outline-none"
+                      />
+                    )}
+
+                    {field.type === "select" && (
+                      <select className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-indigo-300 focus:outline-none">
+                        {field.options?.map((option) => {
+                          return <option>{option}</option>;
+                        })}
+                      </select>
                     )}
                   </div>
                 </>
