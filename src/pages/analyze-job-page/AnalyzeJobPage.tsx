@@ -1,5 +1,8 @@
+import Header from "../../components/header/Header";
+import type { PageInformation } from "../../pages/PageConfig";
+
 function AnalyzeJobPage() {
-  return <>Placeholder AnalyzeJob</>;
+  return <>Test!!</>;
 }
 
 export default AnalyzeJobPage;

@@ -1,5 +1,7 @@
+import Header from "../../components/header/Header";
+
 function StatisticsPage() {
-  return <>Placeholder Statistics</>;
+  return <>test</>;
 }
 
 export default StatisticsPage;

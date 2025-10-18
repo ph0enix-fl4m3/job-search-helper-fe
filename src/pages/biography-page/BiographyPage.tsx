@@ -1,5 +1,7 @@
+import Header from "../../components/header/Header";
+
 function BiographyPage() {
-  return <>Placeholder Biography</>;
+  return <>Test</>;
 }
 
 export default BiographyPage;
