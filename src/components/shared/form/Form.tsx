@@ -3,6 +3,7 @@ export interface FormField {
   type: "text" | "date" | "number" | "select";
   placeholder?: string;
   options?: string[];
+  id: string;
 }
 
 export interface FormParams {
@@ -10,10 +11,11 @@ export interface FormParams {
   fields: FormField[];
 }
 
+// TODO fix problem with non unique keys!!
 function Form({ title, fields }: FormParams) {
   return (
     <>
-      <form className="space-y-10">
+      <div className="space-y-10">
         <section>
           {title !== null && (
             <h2 className="text-xl font-semibold text-indigo-700 mb-4">
@@ -25,7 +27,7 @@ function Form({ title, fields }: FormParams) {
             {fields.map((field) => {
               return (
                 <>
-                  <div>
+                  <div key={field.id}>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
                       {field.label}
                     </label>
@@ -55,7 +57,7 @@ function Form({ title, fields }: FormParams) {
                     {field.type === "select" && (
                       <select className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-indigo-300 focus:outline-none">
                         {field.options?.map((option) => {
-                          return <option>{option}</option>;
+                          return <option key={option}>{option}</option>;
                         })}
                       </select>
                     )}
@@ -65,7 +67,7 @@ function Form({ title, fields }: FormParams) {
             })}
           </div>
         </section>
-      </form>
+      </div>
     </>
   );
 }

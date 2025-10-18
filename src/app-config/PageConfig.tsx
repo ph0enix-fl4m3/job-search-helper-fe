@@ -8,6 +8,7 @@ export interface PageInformation {
   title: string;
   path: string;
   element: JSX.Element;
+  id: string; // TODO - Maybe there is a better way to do this?
 }
 
 export const pages: Array<PageInformation> = [
@@ -15,21 +16,25 @@ export const pages: Array<PageInformation> = [
     title: "General Information",
     path: "/biography",
     element: <BiographyPage />,
+    id: "app-general-information",
   },
 
   {
     title: "Analyze Job Offering",
     path: "/analysis",
     element: <AnalyzeJobPage />,
+    id: "app-analyze-job-offering",
   },
   {
     title: "List Ingested Jobs",
     path: "/jobs",
     element: <JobsListPage />,
+    id: "app-list-ingested-jobs",
   },
   {
     title: "Job Statistics",
     path: "/statistics",
     element: <StatisticsPage />,
+    id: "app-statistics",
   },
 ];
